@@ -1,7 +1,6 @@
 **Gilded Rose Tech Test**
 
-
-This is a well known kata developed by Terry Hughes. This is commonly used as a tech test to assess a candidate's ability to read, refactor and extend legacy code.
+ This is a well known kata developed by Terry Hughes. This is commonly used as a tech test to assess a candidate's ability to read, refactor and extend legacy code.
 
 Here is the text of the kata:
 
