@@ -1,4 +1,6 @@
-class gilded_rose
+class Gilded_Rose
+
+  attr_accessor :items
 
   def initialize(items)
     @items = items
