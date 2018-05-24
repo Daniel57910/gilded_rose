@@ -4,6 +4,8 @@ require 'shop'
 describe Gilded_Rose do
   before(:each) do
     class Test_Item
+
+      attr_accessor :name, :sell_in, :quality
       def initialize(name, sell_in, quality)
         @name = name
         @sell_in = sell_in
@@ -23,10 +25,18 @@ describe Gilded_Rose do
 
   end
 
-  it "returns the gilded rose pub" do
-    items_in_shop = @gilded_rose.items
-    expect(items_in_shop.length).to eq 3
-    
+  describe "#initialize" do
+    it "should have an array of items upon initialization" do
+      items_in_shop = @gilded_rose.items
+      expect(items_in_shop.length).to eq 3
+    end
+    it "should have an array of items with name, sell in and quality" do
+      items_in_shop = @gilded_rose.items
+      binding.pry
+      expect(items_in_shop[0].name).to eq "apple"
+      expect(items_in_shop[1].sell_in).to eq 15
+      expect(items_in_shop[2].quality).to eq 6
+    end
   end
 end
 
