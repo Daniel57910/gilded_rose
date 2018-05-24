@@ -38,6 +38,31 @@
         null,
         null
       ],
+      "/Users/danielwork/Documents/GitHub/makers/tech_tests/gil_rose/spec/name_checker_spec.rb": [
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/danielwork/Documents/GitHub/makers/tech_tests/gil_rose/lib/name_checker.rb": [
+        1,
+        1,
+        1,
+        2,
+        null,
+        null,
+        null
+      ],
       "/Users/danielwork/Documents/GitHub/makers/tech_tests/gil_rose/spec/shop_spec.rb": [
         1,
         1,
@@ -45,11 +70,10 @@
         null,
         1,
         1,
-        null,
         2,
         2,
         2,
-        null,
+        2,
         null,
         null,
         1,
@@ -73,6 +97,9 @@
         1,
         null,
         1,
+        null,
+        1,
+        null,
         null,
         1,
         2,
@@ -128,9 +155,6 @@
         null
       ],
       "/Users/danielwork/Documents/GitHub/makers/tech_tests/gil_rose/spec/helper_methods.rb": [
-        null,
-        null,
-        null,
         1,
         1,
         1,
@@ -150,6 +174,6 @@
         null
       ]
     },
-    "timestamp": 1527172869
+    "timestamp": 1527175631
   }
 }

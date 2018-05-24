@@ -14,26 +14,26 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2018-05-24T15:41:09+01:00">2018-05-24T15:41:09+01:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2018-05-24T16:27:11+01:00">2018-05-24T16:27:11+01:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="red">68.75%</span></span>
+    (<span class="covered_percent"><span class="red">73.4%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.06
+         1.07
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>5</b> files in total.
-    <b>80</b> relevant lines. 
-    <span class="green"><b>55</b> lines covered</span> and
+    <b>7</b> files in total.
+    <b>94</b> relevant lines. 
+    <span class="green"><b>69</b> lines covered</span> and
     <span class="red"><b>25</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -61,11 +61,21 @@
       </tr>
       
       <tr>
+        <td class="strong"><a href="#d24d58e8c9e2eb7f8d1c901f356af12bf076f698" class="src_link" title="lib/name_checker.rb">lib/name_checker.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>7</td>
+        <td>4</td>
+        <td>4</td>
+        <td>0</td>
+        <td>1.3</td>
+      </tr>
+      
+      <tr>
         <td class="strong"><a href="#7740f70e149bbb11c019829c394d69c96a163bb6" class="src_link" title="lib/shop.rb">lib/shop.rb</a></td>
-        <td class="red strong">16.67 %</td>
-        <td>56</td>
-        <td>30</td>
-        <td>5</td>
+        <td class="red strong">19.35 %</td>
+        <td>59</td>
+        <td>31</td>
+        <td>6</td>
         <td>25</td>
         <td>0.2</td>
       </tr>
@@ -73,7 +83,7 @@
       <tr>
         <td class="strong"><a href="#19a7bd53db9bd1c5dfbbe5c3ffec9f1521291eab" class="src_link" title="spec/helper_methods.rb">spec/helper_methods.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>20</td>
+        <td>17</td>
         <td>13</td>
         <td>13</td>
         <td>0</td>
@@ -91,13 +101,23 @@
       </tr>
       
       <tr>
+        <td class="strong"><a href="#bb425b9547dcc8a2fe8aea825fcfc07312af301a" class="src_link" title="spec/name_checker_spec.rb">spec/name_checker_spec.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>14</td>
+        <td>8</td>
+        <td>8</td>
+        <td>0</td>
+        <td>1.0</td>
+      </tr>
+      
+      <tr>
         <td class="strong"><a href="#db7aa79fa6ff1d8a3dc6e4d987b372fa6400f5fd" class="src_link" title="spec/shop_spec.rb">spec/shop_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>29</td>
-        <td>17</td>
-        <td>17</td>
+        <td>28</td>
+        <td>18</td>
+        <td>18</td>
         <td>0</td>
-        <td>1.2</td>
+        <td>1.3</td>
       </tr>
       
     </tbody>
@@ -213,13 +233,74 @@
 </div>
 
       
+        <div class="source_table" id="d24d58e8c9e2eb7f8d1c901f356af12bf076f698">
+  <div class="header">
+    <h3>lib/name_checker.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>4</b> relevant lines. 
+      <span class="green"><b>4</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">class Name_Checker </code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  SPECIAL_ITEMS = [&quot;Aged Brie&quot;, &quot;Sulfuras, Hand of Ragnaros&quot;, &quot;Backstage passes to a TAKAL80ETC concert&quot;]</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def self.special_products</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="4">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    SPECIAL_ITEMS</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="5">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="6">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="7">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+
+      
         <div class="source_table" id="7740f70e149bbb11c019829c394d69c96a163bb6">
   <div class="header">
     <h3>lib/shop.rb</h3>
-    <h4><span class="red">16.67 %</span> covered</h4>
+    <h4><span class="red">19.35 %</span> covered</h4>
     <div>
-      <b>30</b> relevant lines. 
-      <span class="green"><b>5</b> lines covered</span> and
+      <b>31</b> relevant lines. 
+      <span class="green"><b>6</b> lines covered</span> and
       <span class="red"><b>25</b> lines missed.</span>
     </div>
   </div>
@@ -230,7 +311,7 @@
         <li class="covered" data-hits="1" data-linenumber="1">
           <span class="hits">1</span>
           
-          <code class="ruby">class Gilded_Rose</code>
+          <code class="ruby">require_relative &#39;name_checker&#39;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="2">
@@ -242,7 +323,7 @@
         <li class="covered" data-hits="1" data-linenumber="3">
           <span class="hits">1</span>
           
-          <code class="ruby">  attr_accessor :items</code>
+          <code class="ruby">class Gilded_Rose</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="4">
@@ -254,187 +335,187 @@
         <li class="covered" data-hits="1" data-linenumber="5">
           <span class="hits">1</span>
           
-          <code class="ruby">  def initialize(items)</code>
+          <code class="ruby">  attr_accessor :items</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="6">
-          <span class="hits">2</span>
+        <li class="never" data-hits="" data-linenumber="6">
           
-          <code class="ruby">    @items = items</code>
+          
+          <code class="ruby">  #include Name_Checker</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="7">
           
           
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="8">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def initialize(items)</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="9">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    @items = items</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="10">
+          
+          
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="8">
+        <li class="never" data-hits="" data-linenumber="11">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="9">
+        <li class="covered" data-hits="1" data-linenumber="12">
           <span class="hits">1</span>
           
           <code class="ruby">  def update_quality()</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="10">
+        <li class="missed" data-hits="0" data-linenumber="13">
           
           
           <code class="ruby">    @items.each do |item|</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="11">
+        <li class="missed" data-hits="0" data-linenumber="14">
           
           
-          <code class="ruby">      if item.name != &quot;Aged Brie&quot; and item.name != &quot;Backstage passes to a TAFKAL80ETC concert&quot;</code>
+          <code class="ruby">      if !(Name_Checker.special_products.includes?(item.name))</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="12">
+        <li class="missed" data-hits="0" data-linenumber="15">
           
           
           <code class="ruby">        if item.quality &gt; 0</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="13">
+        <li class="missed" data-hits="0" data-linenumber="16">
           
           
           <code class="ruby">          if item.name != &quot;Sulfuras, Hand of Ragnaros&quot;</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="14">
+        <li class="missed" data-hits="0" data-linenumber="17">
           
           
           <code class="ruby">            item.quality = item.quality - 1</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="15">
+        <li class="never" data-hits="" data-linenumber="18">
           
           
           <code class="ruby">          end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="16">
+        <li class="never" data-hits="" data-linenumber="19">
           
           
           <code class="ruby">        end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="17">
+        <li class="never" data-hits="" data-linenumber="20">
           
           
           <code class="ruby">      else</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="18">
+        <li class="missed" data-hits="0" data-linenumber="21">
           
           
           <code class="ruby">        if item.quality &lt; 50</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="19">
+        <li class="missed" data-hits="0" data-linenumber="22">
           
           
           <code class="ruby">          item.quality = item.quality + 1</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="20">
+        <li class="missed" data-hits="0" data-linenumber="23">
           
           
           <code class="ruby">          if item.name == &quot;Backstage passes to a TAFKAL80ETC concert&quot;</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="21">
+        <li class="missed" data-hits="0" data-linenumber="24">
           
           
           <code class="ruby">            if item.sell_in &lt; 11</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="22">
+        <li class="missed" data-hits="0" data-linenumber="25">
           
           
           <code class="ruby">              if item.quality &lt; 50</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="23">
-          
-          
-          <code class="ruby">                item.quality = item.quality + 1</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="24">
-          
-          
-          <code class="ruby">              end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="25">
-          
-          
-          <code class="ruby">            end</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="26">
           
           
-          <code class="ruby">            if item.sell_in &lt; 6</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="27">
-          
-          
-          <code class="ruby">              if item.quality &lt; 50</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="28">
-          
-          
           <code class="ruby">                item.quality = item.quality + 1</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="29">
+        <li class="never" data-hits="" data-linenumber="27">
           
           
           <code class="ruby">              end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="30">
+        <li class="never" data-hits="" data-linenumber="28">
           
           
           <code class="ruby">            end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="31">
+        <li class="missed" data-hits="0" data-linenumber="29">
           
           
-          <code class="ruby">          end</code>
+          <code class="ruby">            if item.sell_in &lt; 6</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="30">
+          
+          
+          <code class="ruby">              if item.quality &lt; 50</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="31">
+          
+          
+          <code class="ruby">                item.quality = item.quality + 1</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="32">
           
           
-          <code class="ruby">        end</code>
+          <code class="ruby">              end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="33">
           
           
-          <code class="ruby">      end</code>
+          <code class="ruby">            end</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="34">
+        <li class="never" data-hits="" data-linenumber="34">
           
           
-          <code class="ruby">      if item.name != &quot;Sulfuras, Hand of Ragnaros&quot;</code>
+          <code class="ruby">          end</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="35">
+        <li class="never" data-hits="" data-linenumber="35">
           
           
-          <code class="ruby">        item.sell_in = item.sell_in - 1</code>
+          <code class="ruby">        end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="36">
@@ -446,118 +527,136 @@
         <li class="missed" data-hits="0" data-linenumber="37">
           
           
-          <code class="ruby">      if item.sell_in &lt; 0</code>
+          <code class="ruby">      if item.name != &quot;Sulfuras, Hand of Ragnaros&quot;</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="38">
           
           
-          <code class="ruby">        if item.name != &quot;Aged Brie&quot;</code>
+          <code class="ruby">        item.sell_in = item.sell_in - 1</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="39">
-          
-          
-          <code class="ruby">          if item.name != &quot;Backstage passes to a TAFKAL80ETC concert&quot;</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="40">
-          
-          
-          <code class="ruby">            if item.quality &gt; 0</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="41">
-          
-          
-          <code class="ruby">              if item.name != &quot;Sulfuras, Hand of Ragnaros&quot;</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="42">
-          
-          
-          <code class="ruby">                item.quality = item.quality - 1</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="43">
-          
-          
-          <code class="ruby">              end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="44">
-          
-          
-          <code class="ruby">            end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="45">
-          
-          
-          <code class="ruby">          else</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="46">
-          
-          
-          <code class="ruby">            item.quality = item.quality - item.quality</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="47">
-          
-          
-          <code class="ruby">          end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="48">
-          
-          
-          <code class="ruby">        else</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="49">
-          
-          
-          <code class="ruby">          if item.quality &lt; 50</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="50">
-          
-          
-          <code class="ruby">            item.quality = item.quality + 1</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="51">
-          
-          
-          <code class="ruby">          end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="52">
-          
-          
-          <code class="ruby">        end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="53">
+        <li class="never" data-hits="" data-linenumber="39">
           
           
           <code class="ruby">      end</code>
         </li>
       
+        <li class="missed" data-hits="0" data-linenumber="40">
+          
+          
+          <code class="ruby">      if item.sell_in &lt; 0</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="41">
+          
+          
+          <code class="ruby">        if item.name != &quot;Aged Brie&quot;</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="42">
+          
+          
+          <code class="ruby">          if item.name != &quot;Backstage passes to a TAFKAL80ETC concert&quot;</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="43">
+          
+          
+          <code class="ruby">            if item.quality &gt; 0</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="44">
+          
+          
+          <code class="ruby">              if item.name != &quot;Sulfuras, Hand of Ragnaros&quot;</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="45">
+          
+          
+          <code class="ruby">                item.quality = item.quality - 1</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="46">
+          
+          
+          <code class="ruby">              end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="47">
+          
+          
+          <code class="ruby">            end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="48">
+          
+          
+          <code class="ruby">          else</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="49">
+          
+          
+          <code class="ruby">            item.quality = item.quality - item.quality</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="50">
+          
+          
+          <code class="ruby">          end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="51">
+          
+          
+          <code class="ruby">        else</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="52">
+          
+          
+          <code class="ruby">          if item.quality &lt; 50</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="53">
+          
+          
+          <code class="ruby">            item.quality = item.quality + 1</code>
+        </li>
+      
         <li class="never" data-hits="" data-linenumber="54">
           
           
-          <code class="ruby">    end</code>
+          <code class="ruby">          end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="55">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">        end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="56">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="57">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="58">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="59">
           
           
           <code class="ruby">end</code>
@@ -582,124 +681,106 @@
   <pre>
     <ol>
       
-        <li class="never" data-hits="" data-linenumber="1">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="2">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="3">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="4">
+        <li class="covered" data-hits="1" data-linenumber="1">
           <span class="hits">1</span>
           
           <code class="ruby">  class Test_Item</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="5">
+        <li class="covered" data-hits="1" data-linenumber="2">
           <span class="hits">1</span>
           
           <code class="ruby">    attr_accessor :name, :sell_in, :quality</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="6">
+        <li class="covered" data-hits="1" data-linenumber="3">
           <span class="hits">1</span>
           
           <code class="ruby">    def initialize(name, sell_in, quality)</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="7">
+        <li class="covered" data-hits="6" data-linenumber="4">
           <span class="hits">6</span>
           
           <code class="ruby">      @name = name</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="8">
+        <li class="covered" data-hits="6" data-linenumber="5">
           <span class="hits">6</span>
           
           <code class="ruby">      @sell_in = sell_in</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="9">
+        <li class="covered" data-hits="6" data-linenumber="6">
           <span class="hits">6</span>
           
           <code class="ruby">      @quality = quality</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="10">
+        <li class="never" data-hits="" data-linenumber="7">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="11">
+        <li class="never" data-hits="" data-linenumber="8">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="12">
+        <li class="never" data-hits="" data-linenumber="9">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="13">
+        <li class="covered" data-hits="1" data-linenumber="10">
           <span class="hits">1</span>
           
           <code class="ruby">  def create_items_array</code>
         </li>
       
+        <li class="covered" data-hits="2" data-linenumber="11">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    item_1 = Test_Item.new(&quot;apple&quot;, 20, 20)</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="12">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    @items.push(item_1)</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="13">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    item_2 = Test_Item.new(&quot;cherry&quot;, 15, 8)</code>
+        </li>
+      
         <li class="covered" data-hits="2" data-linenumber="14">
           <span class="hits">2</span>
           
-          <code class="ruby">  item_1 = Test_Item.new(&quot;apple&quot;, 20, 20)</code>
+          <code class="ruby">    @items.push(item_2)</code>
         </li>
       
         <li class="covered" data-hits="2" data-linenumber="15">
           <span class="hits">2</span>
           
-          <code class="ruby">  @items.push(item_1)</code>
+          <code class="ruby">    item_3 = Test_Item.new(&quot;ham&quot;, 9, 6)</code>
         </li>
       
         <li class="covered" data-hits="2" data-linenumber="16">
           <span class="hits">2</span>
           
-          <code class="ruby">  item_2 = Test_Item.new(&quot;cherry&quot;, 15, 8)</code>
+          <code class="ruby">    @items.push(item_3)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="17">
-          <span class="hits">2</span>
-          
-          <code class="ruby">  @items.push(item_2)</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="18">
-          <span class="hits">2</span>
-          
-          <code class="ruby">  item_3 = Test_Item.new(&quot;ham&quot;, 9, 6)</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="19">
-          <span class="hits">2</span>
-          
-          <code class="ruby">  @items.push(item_3)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="20">
+        <li class="never" data-hits="" data-linenumber="17">
           
           
-          <code class="ruby">end</code>
+          <code class="ruby">  end</code>
         </li>
       
     </ol>
@@ -846,13 +927,116 @@
 </div>
 
       
+        <div class="source_table" id="bb425b9547dcc8a2fe8aea825fcfc07312af301a">
+  <div class="header">
+    <h3>spec/name_checker_spec.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>8</b> relevant lines. 
+      <span class="green"><b>8</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;name_checker&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;pry&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="3">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
+          <code class="ruby">describe &#39;Name_Checker&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  describe Name_Checker do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="6">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;returns true if a special item is identified by name&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="7">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(described_class.special_products.include?(&quot;Aged Brie&quot;)).to eq true</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="9">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;returns false if a regular item is included by name&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="10">
+          <span class="hits">1</span>
+          
+          <code class="ruby">       expect(described_class.special_products.include?(&quot;apple&quot;)).to eq false</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="11">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="12">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="13">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="14">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+
+      
         <div class="source_table" id="db7aa79fa6ff1d8a3dc6e4d987b372fa6400f5fd">
   <div class="header">
     <h3>spec/shop_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>17</b> relevant lines. 
-      <span class="green"><b>17</b> lines covered</span> and
+      <b>18</b> relevant lines. 
+      <span class="green"><b>18</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -896,139 +1080,133 @@
           <code class="ruby">  before(:each) do</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="7">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="8">
+        <li class="covered" data-hits="2" data-linenumber="7">
           <span class="hits">2</span>
           
           <code class="ruby">    @items = []</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="9">
+        <li class="covered" data-hits="2" data-linenumber="8">
           <span class="hits">2</span>
           
           <code class="ruby">    create_items_array</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="10">
+        <li class="covered" data-hits="2" data-linenumber="9">
           <span class="hits">2</span>
           
           <code class="ruby">    @gilded_rose = described_class.new(@items)</code>
         </li>
       
+        <li class="covered" data-hits="2" data-linenumber="10">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    binding.pry</code>
+        </li>
+      
         <li class="never" data-hits="" data-linenumber="11">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="12">
           
           
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="13">
-          
-          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="14">
+        <li class="covered" data-hits="1" data-linenumber="13">
           <span class="hits">1</span>
           
           <code class="ruby">  describe &quot;#initialize&quot; do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="15">
+        <li class="covered" data-hits="1" data-linenumber="14">
           <span class="hits">1</span>
           
           <code class="ruby">    before(:each) do</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="16">
+        <li class="covered" data-hits="2" data-linenumber="15">
           <span class="hits">2</span>
           
           <code class="ruby">      @items_in_shop = @gilded_rose.items</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="17">
+        <li class="never" data-hits="" data-linenumber="16">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="18">
+        <li class="covered" data-hits="1" data-linenumber="17">
           <span class="hits">1</span>
           
           <code class="ruby">    it &quot;should have an array of items upon initialization&quot; do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="19">
+        <li class="covered" data-hits="1" data-linenumber="18">
           <span class="hits">1</span>
           
           <code class="ruby">      expect(@items_in_shop.length).to eq 3</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="20">
+        <li class="never" data-hits="" data-linenumber="19">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="21">
+        <li class="covered" data-hits="1" data-linenumber="20">
           <span class="hits">1</span>
           
           <code class="ruby">    it &quot;should have an array of items with name, sell in and quality&quot; do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="22">
+        <li class="covered" data-hits="1" data-linenumber="21">
           <span class="hits">1</span>
           
           <code class="ruby">      expect(@items_in_shop[0].name).to eq &quot;apple&quot;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="23">
+        <li class="covered" data-hits="1" data-linenumber="22">
           <span class="hits">1</span>
           
           <code class="ruby">      expect(@items_in_shop[1].sell_in).to eq 15</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="24">
+        <li class="covered" data-hits="1" data-linenumber="23">
           <span class="hits">1</span>
           
           <code class="ruby">      expect(@items_in_shop[2].quality).to eq 6</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="25">
+        <li class="never" data-hits="" data-linenumber="24">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="26">
+        <li class="never" data-hits="" data-linenumber="25">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="27">
+        <li class="never" data-hits="" data-linenumber="26">
           
           
           <code class="ruby">end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="28">
+        <li class="never" data-hits="" data-linenumber="27">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="29">
+        <li class="never" data-hits="" data-linenumber="28">
           
           
           <code class="ruby"></code>

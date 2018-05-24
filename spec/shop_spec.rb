@@ -4,11 +4,10 @@ require_relative 'helper_methods'
 
 describe Gilded_Rose do
   before(:each) do
-
     @items = []
     create_items_array
     @gilded_rose = described_class.new(@items)
-
+    binding.pry
   end
 
   describe "#initialize" do
