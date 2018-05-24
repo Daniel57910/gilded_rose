@@ -15,3 +15,9 @@
     item_3 = Test_Item.new("ham", 9, 6)
     @items.push(item_3)
   end
+
+  def test_special_items
+    create_items_array
+    special_item = Test_Item.new("Aged Brie", 20, 10)
+    @items.push(special_item)
+  end

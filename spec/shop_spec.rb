@@ -3,15 +3,15 @@ require 'shop'
 require_relative 'helper_methods'
 
 describe Gilded_Rose do
+
   before(:each) do
     @items = []
-    create_items_array
-    @gilded_rose = described_class.new(@items)
-    binding.pry
   end
 
   describe "#initialize" do
     before(:each) do
+      create_items_array
+      @gilded_rose = described_class.new(@items)
       @items_in_shop = @gilded_rose.items
     end
     it "should have an array of items upon initialization" do
@@ -23,6 +23,21 @@ describe Gilded_Rose do
       expect(@items_in_shop[2].quality).to eq 6
     end
   end
+
+  describe "#update_quality" do
+    before(:each) do
+      test_special_items
+      @gilded_rose = described_class.new(@items)
+      @gilded_rose.update_quality
+    end
+    it "adds regular items to the regular item array" do
+      expect(@gilded_rose.regular_items.length).to eq 3
+      expect(@gilded_rose.regular_items[0].name).to eq "apple"
+    end
+    it "adds irregular items to the irregular item array" do
+      expect(@gilded_rose.irregular_items.length).to eq 1
+      expect(@gilded_rose.irregular_items[0].name).to eq "Aged Brie"
+    end
+  end
+
 end
-
-

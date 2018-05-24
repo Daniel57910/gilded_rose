@@ -7,3 +7,13 @@ As a user I want to track days an item is held
 As a user I want to concurrently decrement the quality and sellIn date of an item
 As a user, once sellIn date is less than 0, quality decrements twice as fast
 As a user, I want to ensure that no item reaches a quality below 0.
+
+
+require('./lib/app')
+item1 = Item.new("apple", 10, 10)
+item2 = Item.new("Aged Brie", 10, 10)
+items = []
+items.push(item1).push(item2)
+shop = Gilded_Rose.new(items)
+shop.items
+shop.update_quality
