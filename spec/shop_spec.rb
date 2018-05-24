@@ -5,18 +5,8 @@ require_relative 'helper_methods'
 describe Gilded_Rose do
   before(:each) do
 
-    class Test_Item
-      attr_accessor :name, :sell_in, :quality
-      def initialize(name, sell_in, quality)
-        @name = name
-        @sell_in = sell_in
-        @quality = quality
-      end
-    end
-
     @items = []
     create_items_array
-
     @gilded_rose = described_class.new(@items)
 
   end
