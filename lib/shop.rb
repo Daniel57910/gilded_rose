@@ -1,4 +1,5 @@
 require_relative 'name_checker'
+require_relative 'regular_updater'
 require 'pry'
 
 class Gilded_Rose
@@ -14,10 +15,7 @@ class Gilded_Rose
 
     def update_quality()
       categorize_items
-       @regular_items.each do | regular_item |
-        regular_item.quality-=1 if regular_item.quality > 0
-        regular_item.sell_in-=1 if regular_item.sell_in > 0
-      end
+      Regular_Updater.update_items(@regular_items)
       @irregular_items.each do | item |
         if item.quality > 0
           if item.name != "Sulfuras, Hand of Ragnaros"
