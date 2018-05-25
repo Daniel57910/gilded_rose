@@ -21,3 +21,9 @@
     special_item = Test_Item.new("Aged Brie", 20, 10)
     @items.push(special_item)
   end
+
+  def add_expired_item
+    create_items_array
+    expired_item = Test_Item.new("chocolate", -5, 0)
+    @items.push(expired_item)
+  end
