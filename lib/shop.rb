@@ -33,14 +33,14 @@ class Gilded_Rose
   
   def categorize_items
     @items.each do |item|
-      @regular_items.push(item) if is_regular_item?(item.name) and !is_legendary_item(item.name)
+      @regular_items.push(item) if is_regular_item?(item.name)
       @irregular_items.push(item) if !is_regular_item?(item.name) and !is_legendary_item(item.name)
-      @sulfuras.push(item) if item.name == "Sulfura, Hand of Ragnaros"
+      @sulfuras.push(item) if is_legendary_item(item.name)
     end
   end
 
   def is_regular_item?(name)
-   !(Name_Checker.special_products.include?(name))
+   !((Name_Checker.special_products.include?(name)) or is_legendary_item(name))
   end
 
   def is_legendary_item(name)
