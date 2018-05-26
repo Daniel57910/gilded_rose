@@ -16,4 +16,9 @@ module Item_Updater_Methods
     item.quality >= 50
   end
 
+  def check_item_quality(item)
+    item.quality = 50 if item_quality_max?(item)
+    item.quality = 0  if is_expired?(item)
+  end
+
 end

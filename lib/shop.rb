@@ -20,9 +20,14 @@ class Gilded_Rose
       categorize_items
       update_regular_items
       update_irregular_items
+      item_quality_checker
     end
 
   private
+
+  def item_quality_checker 
+    @items.each do |item | check_item_quality(item) end
+  end
 
   def update_regular_items
     Regular_Updater.update_items(@regular_items)
