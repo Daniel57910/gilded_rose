@@ -1,8 +1,10 @@
 require './lib/modules/item_updater_methods'
+require './lib/modules/item_sell_in'
 
 class Regular_Updater
 
   extend Item_Updater_Methods
+  extend Update_Sell_In
 
   attr_reader :items
   def self.update_items(items)
@@ -15,7 +17,7 @@ class Regular_Updater
   def self.update_regular_items
     @@items.each do | item |
       update_item_quality(item) if item_quality_positive?(item)
-      item.sell_in -= 1
+      update_sell_in(item)
     end
   end
 

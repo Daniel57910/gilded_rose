@@ -33,7 +33,6 @@ class Gilded_Rose
       update_aged_brie(item) if aged_brie?(item.name)
       update_backstage_pass(item) if backstage_pass?(item.name)
       update_conjured_item(item) if is_conjured_item?(item.name)
-      update_sell_in(item)
     end
   end
   
