@@ -7,7 +7,6 @@ require 'pry'
 class Gilded_Rose
 
     attr_reader :items, :regular_items, :irregular_items, :sulfuras
-    AGED_BRIE = "Aged Brie"
 
     def initialize(items)
       @items = items
@@ -19,22 +18,23 @@ class Gilded_Rose
     def update_quality()
       categorize_items
       update_regular_items
-      @irregular_items.each do | item |
-        Aged_Brie_Updater.update(item) if item.name == "Aged Brie"
-        if item.quality < 50 and item.name == "backstage pass"
-          Backstage_Pass_Updater.update(item)
-        end
-        item.sell_in = item.sell_in - 1
-      end
+      update_irregular_items
     end
-
 
   private
 
+  def update_irregular_items
+    @irregular_items.each do | item |
+      update_aged_brie(item) if aged_brie?(item.name)
+      update_backstage_pass(item) if backstage_pass?(item.name)
+      update_sell_in(item)
+    end
+  end
+  
   def categorize_items
     @items.each do |item|
-      @regular_items.push(item) if is_regular_item?(item.name)
-      @irregular_items.push(item) if !is_regular_item?(item.name) and item.name != "Sulfura, Hand of Ragnaros"
+      @regular_items.push(item) if is_regular_item?(item.name) and !is_legendary_item(item.name)
+      @irregular_items.push(item) if !is_regular_item?(item.name) and !is_legendary_item(item.name)
       @sulfuras.push(item) if item.name == "Sulfura, Hand of Ragnaros"
     end
   end
@@ -43,9 +43,34 @@ class Gilded_Rose
    !(Name_Checker.special_products.include?(name))
   end
 
+  def is_legendary_item(name)
+    name == "Sulfura, Hand of Ragnaros"
+  end
+
   def update_regular_items
     Regular_Updater.update_items(@regular_items)
   end
+
+  def update_aged_brie(item)
+    Aged_Brie_Updater.update(item)
+  end
+
+  def update_backstage_pass(item)
+    Backstage_Pass_Updater.update(item)
+  end
+
+  def update_sell_in(item)
+    item.sell_in -= 1
+  end
+
+  def aged_brie?(name)
+    name == "Aged Brie"
+  end
+  
+  def backstage_pass?(name)
+    name == "Backstage Pass"
+  end
+    
 
 end
 
