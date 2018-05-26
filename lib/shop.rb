@@ -1,6 +1,7 @@
 require_relative 'name_checker'
 require_relative 'regular_updater'
 require_relative 'aged_brie_updater'
+require_relative 'backstage_pass_updater'
 require 'pry'
 
 class Gilded_Rose
@@ -19,13 +20,7 @@ class Gilded_Rose
       update_regular_items
       @irregular_items.each do | item |
         Aged_Brie_Updater.update(item) if item.name == "Aged Brie"
-        if item.quality > 0
-          if item.name != "Sulfuras, Hand of Ragnaros"
-            item.quality = item.quality - 1
-          end
-        end
-      else
-        if item.quality < 50
+        if item.quality < 50 and item.name == "backstage pass"
           Backstage_Pass_Updater.update(item)
         end
       if item.name != "Sulfuras, Hand of Ragnaros" 
@@ -42,7 +37,6 @@ class Gilded_Rose
           else
             item.quality = item.quality - item.quality
           end
-        else
         end
       end
     end
