@@ -1,5 +1,5 @@
 require_relative 'spec_helper'
-require 'conjured_updater'
+require './lib/updater_classes/conjured_updater'
 require_relative 'helper_methods'
 
 describe Conjured_Updater do

@@ -1,4 +1,4 @@
-require 'regular_updater'
+require './lib/updater_classes/regular_updater'
 require_relative 'helper_methods'
 require 'pry'
 

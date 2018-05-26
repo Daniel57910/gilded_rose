@@ -1,14 +1,11 @@
-require_relative 'name_checker'
-require_relative 'regular_updater'
-require_relative 'aged_brie_updater'
-require_relative 'backstage_pass_updater'
-require_relative 'conjured_updater'
-require_relative 'item_updater'
+require './lib/modules/all_modules'
+require './lib/updater_classes/updater'
 
 class Gilded_Rose
 
     include Name_Checker
-    include Item_Updater
+    include Item_Updater_Methods
+    include Irregular_Item_Updater
 
     attr_reader :items, :regular_items, :irregular_items, :sulfuras
 

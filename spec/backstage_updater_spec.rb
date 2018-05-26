@@ -1,5 +1,6 @@
 require_relative 'helper_methods'
-require 'backstage_pass_updater'
+require './lib/updater_classes/backstage_pass_updater'
+
 require 'pry'
 
 describe Backstage_Pass_Updater do

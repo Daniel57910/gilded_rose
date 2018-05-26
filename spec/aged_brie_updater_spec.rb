@@ -1,6 +1,6 @@
 require_relative 'helper_methods'
 require 'pry'
-require 'aged_brie_updater'
+require './lib/updater_classes/aged_brie_updater'
 
 describe Aged_Brie_Updater do
   it "increases the quality of the item by one and decrements the sell_in" do
