@@ -2,7 +2,7 @@ require_relative 'name_checker'
 require_relative 'regular_updater'
 require_relative 'aged_brie_updater'
 require_relative 'backstage_pass_updater'
-require 'pry'
+require_relative 'conjured_updater'
 
 class Gilded_Rose
 
@@ -41,7 +41,11 @@ class Gilded_Rose
   end
 
   def is_regular_item?(name)
-   !(Name_Checker.special_products.include?(name) or is_legendary_item(name) or name.include?("conjure"))
+   !(Name_Checker.special_products.include?(name) or is_legendary_item(name) or is_conjured_item?(name))
+  end
+
+  def is_conjured_item?(name)
+    name.include?("conjure")
   end
 
   def is_legendary_item(name)
@@ -58,6 +62,10 @@ class Gilded_Rose
 
   def update_backstage_pass(item)
     Backstage_Pass_Updater.update(item)
+  end
+
+  def update_conjured_item(item)
+    Conjured_Item_Updater.update(item)
   end
 
   def update_sell_in(item)

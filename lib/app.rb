@@ -9,4 +9,3 @@ items.push(item1).push(item2)
 shop = Gilded_Rose.new(items)
 shop.items
 shop.update_quality
-binding.pry
