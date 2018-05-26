@@ -38,6 +38,16 @@ describe Gilded_Rose do
       expect(@gilded_rose.irregular_items.length).to eq 1
       expect(@gilded_rose.irregular_items[0].name).to eq "Aged Brie"
     end
+
+    it "adds the legendary item sulfura to sulfuras array" do
+      add_legendary_item
+      @gilded_rose = described_class.new(@items)
+      @gilded_rose.update_items
+      expect(@gilded_rose.sulfuras.length).to eq 1
+      expect(@gilded_rose.irregular_items.length).to eq 1
+      expect(@gilded_rose.regular_items.length).to eq 3
+      expect(@gilded_rose.items.length).to eq 4
+    end
   end
 
 end

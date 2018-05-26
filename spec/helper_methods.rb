@@ -40,3 +40,9 @@
     @pass_3 = Test_Item.new("backstage", 3, 10)
     @pass_4 = Test_Item.new("backstage", -3, 10)
   end
+
+  def add_legendary_item
+    test_special_items
+    sulfura = Test_Item.new("Sulfura, Hand of Ragnaros", 10, 10)
+    @items.push(sulfura)
+  end

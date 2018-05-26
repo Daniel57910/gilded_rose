@@ -6,13 +6,14 @@ require 'pry'
 
 class Gilded_Rose
 
-    attr_reader :items, :regular_items, :irregular_items
+    attr_reader :items, :regular_items, :irregular_items, :sulfuras
     AGED_BRIE = "Aged Brie"
 
     def initialize(items)
       @items = items
       @regular_items = []
       @irregular_items = []
+      @sulfuras = []
     end
 
     def update_quality()
@@ -23,9 +24,7 @@ class Gilded_Rose
         if item.quality < 50 and item.name == "backstage pass"
           Backstage_Pass_Updater.update(item)
         end
-      if item.name != "Sulfuras, Hand of Ragnaros" 
         item.sell_in = item.sell_in - 1
-      end
       if item.sell_in < 0
         if item.name != "Aged Brie"
           if item.name != "Backstage passes to a TAFKAL80ETC concert"
@@ -49,6 +48,7 @@ class Gilded_Rose
     @items.each do |item|
       @regular_items.push(item) if is_regular_item?(item.name)
       @irregular_items.push(item) if !is_regular_item?(item.name)
+      @sulfuras.push(item) if item.name == "Sulfuras, Hand of Ragnaros"
     end
   end
 
