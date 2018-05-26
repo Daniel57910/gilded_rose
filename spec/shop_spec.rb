@@ -45,7 +45,6 @@ describe Gilded_Rose do
       add_legendary_item
       @gilded_rose = described_class.new(@items)
       @gilded_rose.update_quality
-      binding.pry
       expect(@gilded_rose.sulfuras.length).to eq 1
       expect(@gilded_rose.irregular_items.length).to eq 1
       expect(@gilded_rose.regular_items.length).to eq 3

@@ -24,9 +24,9 @@
         1,
         1,
         1,
-        53,
-        53,
-        53,
+        54,
+        54,
+        54,
         null,
         null,
         null,
@@ -119,6 +119,28 @@
         4,
         4,
         null,
+        null,
+        null
+      ],
+      "/Users/danielwork/Documents/GitHub/makers/tech_tests/gil_rose/spec/conjured_updater_spec.rb": [
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/danielwork/Documents/GitHub/makers/tech_tests/gil_rose/lib/conjured_updater.rb": [
+        1,
+        1,
+        1,
+        1,
         null,
         null
       ],
@@ -367,6 +389,7 @@
         3,
         3,
         3,
+        3,
         null,
         null,
         null,
@@ -410,11 +433,15 @@
         3,
         null,
         null,
+        1,
+        3,
+        null,
+        null,
         null,
         null,
         null
       ]
     },
-    "timestamp": 1527342924
+    "timestamp": 1527344156
   }
 }

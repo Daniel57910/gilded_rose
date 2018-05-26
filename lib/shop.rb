@@ -27,6 +27,7 @@ class Gilded_Rose
     @irregular_items.each do | item |
       update_aged_brie(item) if aged_brie?(item.name)
       update_backstage_pass(item) if backstage_pass?(item.name)
+      update_conjured_item(item) if conjured_item?(item.name)
       update_sell_in(item)
     end
   end
@@ -40,7 +41,7 @@ class Gilded_Rose
   end
 
   def is_regular_item?(name)
-   !((Name_Checker.special_products.include?(name)) or is_legendary_item(name))
+   !(Name_Checker.special_products.include?(name) or is_legendary_item(name) or name.include?("conjure"))
   end
 
   def is_legendary_item(name)
@@ -69,6 +70,10 @@ class Gilded_Rose
   
   def backstage_pass?(name)
     name == "Backstage Pass"
+  end
+
+  def conjured_item?(name)
+    name.include?("conjure")
   end
     
 
