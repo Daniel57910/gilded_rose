@@ -27,6 +27,10 @@ class Gilded_Rose
 
   private
 
+  def update_regular_items
+    Regular_Updater.update_items(@regular_items)
+  end
+
   def update_irregular_items
     @irregular_items.each do | item |
       update_aged_brie(item) if aged_brie?(item.name)
