@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2018-05-26T18:04:45+01:00">2018-05-26T18:04:45+01:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2018-05-26T18:06:47+01:00">2018-05-26T18:06:47+01:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,15 +25,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         3.36
+         3.34
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>15</b> files in total.
-    <b>260</b> relevant lines. 
-    <span class="green"><b>258</b> lines covered</span> and
+    <b>261</b> relevant lines. 
+    <span class="green"><b>259</b> lines covered</span> and
     <span class="red"><b>2</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -112,12 +112,12 @@
       
       <tr>
         <td class="strong"><a href="#7740f70e149bbb11c019829c394d69c96a163bb6" class="src_link" title="lib/shop.rb">lib/shop.rb</a></td>
-        <td class="green strong">96.0 %</td>
-        <td>89</td>
-        <td>50</td>
-        <td>48</td>
+        <td class="green strong">96.08 %</td>
+        <td>91</td>
+        <td>51</td>
+        <td>49</td>
         <td>2</td>
-        <td>4.2</td>
+        <td>4.1</td>
       </tr>
       
       <tr>
@@ -513,7 +513,7 @@
         <li class="covered" data-hits="1" data-linenumber="1">
           <span class="hits">1</span>
           
-          <code class="ruby">class Name_Checker </code>
+          <code class="ruby">module Name_Checker </code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="2">
@@ -807,10 +807,10 @@
         <div class="source_table" id="7740f70e149bbb11c019829c394d69c96a163bb6">
   <div class="header">
     <h3>lib/shop.rb</h3>
-    <h4><span class="green">96.0 %</span> covered</h4>
+    <h4><span class="green">96.08 %</span> covered</h4>
     <div>
-      <b>50</b> relevant lines. 
-      <span class="green"><b>48</b> lines covered</span> and
+      <b>51</b> relevant lines. 
+      <span class="green"><b>49</b> lines covered</span> and
       <span class="red"><b>2</b> lines missed.</span>
     </div>
   </div>
@@ -869,7 +869,7 @@
         <li class="covered" data-hits="1" data-linenumber="9">
           <span class="hits">1</span>
           
-          <code class="ruby">    attr_reader :items, :regular_items, :irregular_items, :sulfuras</code>
+          <code class="ruby">    include Name_Checker</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="10">
@@ -881,85 +881,85 @@
         <li class="covered" data-hits="1" data-linenumber="11">
           <span class="hits">1</span>
           
+          <code class="ruby">    attr_reader :items, :regular_items, :irregular_items, :sulfuras</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="12">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="13">
+          <span class="hits">1</span>
+          
           <code class="ruby">    def initialize(items)</code>
-        </li>
-      
-        <li class="covered" data-hits="5" data-linenumber="12">
-          <span class="hits">5</span>
-          
-          <code class="ruby">      @items = items</code>
-        </li>
-      
-        <li class="covered" data-hits="5" data-linenumber="13">
-          <span class="hits">5</span>
-          
-          <code class="ruby">      @regular_items = []</code>
         </li>
       
         <li class="covered" data-hits="5" data-linenumber="14">
           <span class="hits">5</span>
           
-          <code class="ruby">      @irregular_items = []</code>
+          <code class="ruby">      @items = items</code>
         </li>
       
         <li class="covered" data-hits="5" data-linenumber="15">
           <span class="hits">5</span>
           
+          <code class="ruby">      @regular_items = []</code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="16">
+          <span class="hits">5</span>
+          
+          <code class="ruby">      @irregular_items = []</code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="17">
+          <span class="hits">5</span>
+          
           <code class="ruby">      @sulfuras = []</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="16">
+        <li class="never" data-hits="" data-linenumber="18">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="17">
+        <li class="never" data-hits="" data-linenumber="19">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="18">
+        <li class="covered" data-hits="1" data-linenumber="20">
           <span class="hits">1</span>
           
           <code class="ruby">    def update_quality()</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="19">
+        <li class="covered" data-hits="3" data-linenumber="21">
           <span class="hits">3</span>
           
           <code class="ruby">      categorize_items</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="20">
+        <li class="covered" data-hits="3" data-linenumber="22">
           <span class="hits">3</span>
           
           <code class="ruby">      update_regular_items</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="21">
+        <li class="covered" data-hits="3" data-linenumber="23">
           <span class="hits">3</span>
           
           <code class="ruby">      update_irregular_items</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="22">
+        <li class="never" data-hits="" data-linenumber="24">
           
           
           <code class="ruby">    end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="23">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="24">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  private</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="25">
@@ -971,382 +971,394 @@
         <li class="covered" data-hits="1" data-linenumber="26">
           <span class="hits">1</span>
           
+          <code class="ruby">  private</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="27">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="28">
+          <span class="hits">1</span>
+          
           <code class="ruby">  def update_irregular_items</code>
-        </li>
-      
-        <li class="covered" data-hits="3" data-linenumber="27">
-          <span class="hits">3</span>
-          
-          <code class="ruby">    @irregular_items.each do | item |</code>
-        </li>
-      
-        <li class="covered" data-hits="3" data-linenumber="28">
-          <span class="hits">3</span>
-          
-          <code class="ruby">      update_aged_brie(item) if aged_brie?(item.name)</code>
         </li>
       
         <li class="covered" data-hits="3" data-linenumber="29">
           <span class="hits">3</span>
           
-          <code class="ruby">      update_backstage_pass(item) if backstage_pass?(item.name)</code>
+          <code class="ruby">    @irregular_items.each do | item |</code>
         </li>
       
         <li class="covered" data-hits="3" data-linenumber="30">
           <span class="hits">3</span>
           
-          <code class="ruby">      update_conjured_item(item) if conjured_item?(item.name)</code>
+          <code class="ruby">      update_aged_brie(item) if aged_brie?(item.name)</code>
         </li>
       
         <li class="covered" data-hits="3" data-linenumber="31">
           <span class="hits">3</span>
           
+          <code class="ruby">      update_backstage_pass(item) if backstage_pass?(item.name)</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="32">
+          <span class="hits">3</span>
+          
+          <code class="ruby">      update_conjured_item(item) if conjured_item?(item.name)</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="33">
+          <span class="hits">3</span>
+          
           <code class="ruby">      update_sell_in(item)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="32">
-          
-          
-          <code class="ruby">    end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="33">
-          
-          
-          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="34">
           
           
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="35">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="36">
+          
+          
           <code class="ruby">  </code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="35">
+        <li class="covered" data-hits="1" data-linenumber="37">
           <span class="hits">1</span>
           
           <code class="ruby">  def categorize_items</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="36">
+        <li class="covered" data-hits="3" data-linenumber="38">
           <span class="hits">3</span>
           
           <code class="ruby">    @items.each do |item|</code>
         </li>
       
-        <li class="covered" data-hits="13" data-linenumber="37">
+        <li class="covered" data-hits="13" data-linenumber="39">
           <span class="hits">13</span>
           
           <code class="ruby">      @regular_items.push(item) if is_regular_item?(item.name)</code>
         </li>
       
-        <li class="covered" data-hits="13" data-linenumber="38">
+        <li class="covered" data-hits="13" data-linenumber="40">
           <span class="hits">13</span>
           
           <code class="ruby">      @irregular_items.push(item) if !is_regular_item?(item.name) and !is_legendary_item(item.name)</code>
         </li>
       
-        <li class="covered" data-hits="13" data-linenumber="39">
+        <li class="covered" data-hits="13" data-linenumber="41">
           <span class="hits">13</span>
           
           <code class="ruby">      @sulfuras.push(item) if is_legendary_item(item.name)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="40">
+        <li class="never" data-hits="" data-linenumber="42">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="41">
+        <li class="never" data-hits="" data-linenumber="43">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="42">
+        <li class="never" data-hits="" data-linenumber="44">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="43">
+        <li class="covered" data-hits="1" data-linenumber="45">
           <span class="hits">1</span>
           
           <code class="ruby">  def is_regular_item?(name)</code>
         </li>
       
-        <li class="covered" data-hits="26" data-linenumber="44">
+        <li class="covered" data-hits="26" data-linenumber="46">
           <span class="hits">26</span>
           
           <code class="ruby">   !(Name_Checker.special_products.include?(name) or is_legendary_item(name) or is_conjured_item?(name))</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="45">
+        <li class="never" data-hits="" data-linenumber="47">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="46">
+        <li class="never" data-hits="" data-linenumber="48">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="47">
+        <li class="covered" data-hits="1" data-linenumber="49">
           <span class="hits">1</span>
           
           <code class="ruby">  def is_conjured_item?(name)</code>
         </li>
       
-        <li class="covered" data-hits="18" data-linenumber="48">
+        <li class="covered" data-hits="18" data-linenumber="50">
           <span class="hits">18</span>
           
           <code class="ruby">    name.include?(&quot;conjure&quot;)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="49">
+        <li class="never" data-hits="" data-linenumber="51">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="50">
+        <li class="never" data-hits="" data-linenumber="52">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="51">
+        <li class="covered" data-hits="1" data-linenumber="53">
           <span class="hits">1</span>
           
           <code class="ruby">  def is_legendary_item(name)</code>
         </li>
       
-        <li class="covered" data-hits="37" data-linenumber="52">
+        <li class="covered" data-hits="37" data-linenumber="54">
           <span class="hits">37</span>
           
           <code class="ruby">    name == &quot;Sulfura, Hand of Ragnaros&quot;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="53">
+        <li class="never" data-hits="" data-linenumber="55">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="54">
+        <li class="never" data-hits="" data-linenumber="56">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="55">
+        <li class="covered" data-hits="1" data-linenumber="57">
           <span class="hits">1</span>
           
           <code class="ruby">  def update_regular_items</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="56">
+        <li class="covered" data-hits="3" data-linenumber="58">
           <span class="hits">3</span>
           
           <code class="ruby">    Regular_Updater.update_items(@regular_items)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="57">
+        <li class="never" data-hits="" data-linenumber="59">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="58">
+        <li class="never" data-hits="" data-linenumber="60">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="59">
+        <li class="covered" data-hits="1" data-linenumber="61">
           <span class="hits">1</span>
           
           <code class="ruby">  def update_aged_brie(item)</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="60">
+        <li class="covered" data-hits="3" data-linenumber="62">
           <span class="hits">3</span>
           
           <code class="ruby">    Aged_Brie_Updater.update(item)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="61">
+        <li class="never" data-hits="" data-linenumber="63">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="62">
+        <li class="never" data-hits="" data-linenumber="64">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="63">
+        <li class="covered" data-hits="1" data-linenumber="65">
           <span class="hits">1</span>
           
           <code class="ruby">  def update_backstage_pass(item)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="64">
+        <li class="missed" data-hits="0" data-linenumber="66">
           
           
           <code class="ruby">    Backstage_Pass_Updater.update(item)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="65">
+        <li class="never" data-hits="" data-linenumber="67">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="66">
+        <li class="never" data-hits="" data-linenumber="68">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="67">
+        <li class="covered" data-hits="1" data-linenumber="69">
           <span class="hits">1</span>
           
           <code class="ruby">  def update_conjured_item(item)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="68">
+        <li class="missed" data-hits="0" data-linenumber="70">
           
           
           <code class="ruby">    Conjured_Item_Updater.update(item)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="69">
+        <li class="never" data-hits="" data-linenumber="71">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="70">
+        <li class="never" data-hits="" data-linenumber="72">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="71">
+        <li class="covered" data-hits="1" data-linenumber="73">
           <span class="hits">1</span>
           
           <code class="ruby">  def update_sell_in(item)</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="72">
+        <li class="covered" data-hits="3" data-linenumber="74">
           <span class="hits">3</span>
           
           <code class="ruby">    item.sell_in -= 1</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="73">
+        <li class="never" data-hits="" data-linenumber="75">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="74">
+        <li class="never" data-hits="" data-linenumber="76">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="75">
+        <li class="covered" data-hits="1" data-linenumber="77">
           <span class="hits">1</span>
           
           <code class="ruby">  def aged_brie?(name)</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="76">
+        <li class="covered" data-hits="3" data-linenumber="78">
           <span class="hits">3</span>
           
           <code class="ruby">    name == &quot;Aged Brie&quot;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="77">
+        <li class="never" data-hits="" data-linenumber="79">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="78">
+        <li class="never" data-hits="" data-linenumber="80">
           
           
           <code class="ruby">  </code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="79">
+        <li class="covered" data-hits="1" data-linenumber="81">
           <span class="hits">1</span>
           
           <code class="ruby">  def backstage_pass?(name)</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="80">
+        <li class="covered" data-hits="3" data-linenumber="82">
           <span class="hits">3</span>
           
           <code class="ruby">    name == &quot;Backstage Pass&quot;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="81">
+        <li class="never" data-hits="" data-linenumber="83">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="82">
+        <li class="never" data-hits="" data-linenumber="84">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="83">
+        <li class="covered" data-hits="1" data-linenumber="85">
           <span class="hits">1</span>
           
           <code class="ruby">  def conjured_item?(name)</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="84">
+        <li class="covered" data-hits="3" data-linenumber="86">
           <span class="hits">3</span>
           
           <code class="ruby">    name.include?(&quot;conjure&quot;)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="85">
+        <li class="never" data-hits="" data-linenumber="87">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="86">
+        <li class="never" data-hits="" data-linenumber="88">
           
           
           <code class="ruby">    </code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="87">
+        <li class="never" data-hits="" data-linenumber="89">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="88">
+        <li class="never" data-hits="" data-linenumber="90">
           
           
           <code class="ruby">end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="89">
+        <li class="never" data-hits="" data-linenumber="91">
           
           
           <code class="ruby"></code>

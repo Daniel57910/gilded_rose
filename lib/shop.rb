@@ -6,6 +6,8 @@ require_relative 'conjured_updater'
 
 class Gilded_Rose
 
+    include Name_Checker
+
     attr_reader :items, :regular_items, :irregular_items, :sulfuras
 
     def initialize(items)
