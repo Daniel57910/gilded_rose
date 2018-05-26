@@ -1,10 +1,12 @@
 require_relative 'name_checker'
 require_relative 'regular_updater'
+require_relative 'aged_brie_updater'
 require 'pry'
 
 class Gilded_Rose
 
     attr_reader :items, :regular_items, :irregular_items
+    AGED_BRIE = "Aged Brie"
 
     def initialize(items)
       @items = items
@@ -16,6 +18,7 @@ class Gilded_Rose
       categorize_items
       update_regular_items
       @irregular_items.each do | item |
+        Aged_Brie_Updater.update(item) if item.name == "Aged Brie"
         if item.quality > 0
           if item.name != "Sulfuras, Hand of Ragnaros"
             item.quality = item.quality - 1
@@ -37,7 +40,7 @@ class Gilded_Rose
             end
           end
         end
-      if item.name != "Sulfuras, Hand of Ragnaros"
+      if item.name != "Sulfuras, Hand of Ragnaros" || item.name != "Aged Brie"
         item.sell_in = item.sell_in - 1
       end
       if item.sell_in < 0
@@ -52,9 +55,6 @@ class Gilded_Rose
             item.quality = item.quality - item.quality
           end
         else
-          if item.quality < 50
-            item.quality = item.quality + 1
-          end
         end
       end
     end
