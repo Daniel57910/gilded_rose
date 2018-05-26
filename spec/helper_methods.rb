@@ -33,3 +33,10 @@
     expired_item_with_quality = Test_Item.new("bananas", -3, 3)
     @items.push(expired_item_with_quality)
   end
+
+  def add_backstage_passes
+    @pass_1 = Test_Item.new("backstage", 13, 10)
+    @pass_2 = Test_Item.new("backstage", 6, 10)
+    @pass_3 = Test_Item.new("backstage", 3, 10)
+    @pass_4 = Test_Item.new("backstage", -3, 10)
+  end
