@@ -5,7 +5,6 @@ require 'pry'
 class Gilded_Rose
 
     attr_reader :items, :regular_items, :irregular_items
-    #include Name_Checker
 
     def initialize(items)
       @items = items
@@ -15,7 +14,7 @@ class Gilded_Rose
 
     def update_quality()
       categorize_items
-      Regular_Updater.update_items(@regular_items)
+      update_regular_items
       @irregular_items.each do | item |
         if item.quality > 0
           if item.name != "Sulfuras, Hand of Ragnaros"
@@ -73,6 +72,10 @@ class Gilded_Rose
 
   def is_regular_item?(name)
    !(Name_Checker.special_products.include?(name))
+  end
+
+  def update_regular_items
+    Regular_Updater.update_items(@regular_items)
   end
 
 end

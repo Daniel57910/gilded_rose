@@ -116,7 +116,6 @@
         null,
         null,
         null,
-        null,
         null
       ],
       "/Users/danielwork/Documents/GitHub/makers/tech_tests/gil_rose/spec/helper_methods.rb": [
@@ -204,7 +203,6 @@
         null,
         1,
         null,
-        null,
         1,
         4,
         4,
@@ -273,6 +271,10 @@
         16,
         null,
         null,
+        1,
+        2,
+        null,
+        null,
         null,
         null,
         null,
@@ -327,6 +329,6 @@
         null
       ]
     },
-    "timestamp": 1527265958
+    "timestamp": 1527331682
   }
 }

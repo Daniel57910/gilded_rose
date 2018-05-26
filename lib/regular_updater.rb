@@ -16,5 +16,4 @@ class Regular_Updater
   end
 
 
-
 end
