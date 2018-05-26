@@ -27,3 +27,9 @@
     expired_item = Test_Item.new("chocolate", -5, 0)
     @items.push(expired_item)
   end
+
+  def add_expired_item_with_quality
+    create_items_array
+    expired_item_with_quality = Test_Item.new("bananas", -3, 3)
+    @items.push(expired_item_with_quality)
+  end

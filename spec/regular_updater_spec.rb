@@ -9,6 +9,7 @@ describe Regular_Updater do
   end
 
   describe "#update_items" do
+
     it "should decrement the quality and sell in date of the items by one" do
       create_items_array
       expect(@items[0].quality).to eq 20
@@ -26,6 +27,18 @@ describe Regular_Updater do
       expect(@items.last.sell_in).to eq expired_item_sell_in - 1
       expect(@items.last.quality).to eq expired_item_quality
     end
+
+    it "should decrement the quality of the item by two if it's expired" do
+      add_expired_item_with_quality
+      expired_item_sell_in = @items.last.sell_in
+      expired_item_quality = @items.last.quality
+      binding.pry
+      Regular_Updater.update_items(@items)
+      binding.pry
+      expect(@items.last.sell_in).to eq expired_item_sell_in - 1
+      expect(@items.last.quality).to eq expired_item_quality - 2
+    end
+
   end
 
 end
