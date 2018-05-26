@@ -32,11 +32,18 @@ describe Regular_Updater do
       add_expired_item_with_quality
       expired_item_sell_in = @items.last.sell_in
       expired_item_quality = @items.last.quality
-      binding.pry
       Regular_Updater.update_items(@items)
-      binding.pry
       expect(@items.last.sell_in).to eq expired_item_sell_in - 1
       expect(@items.last.quality).to eq expired_item_quality - 2
+    end
+
+    it "should only decrement the quality by 1 if the item's expired but has quality of one" do
+      add_expired_item_with_quality
+      item_with_one_quality = Test_Item.new("Pineapple", -3, 1)
+      @items.push(item_with_one_quality)
+      Regular_Updater.update_items(@items)
+      expect(@items.last.sell_in).to eq -4
+      expect(@items.last.quality).to eq 0
     end
 
   end

@@ -20,8 +20,11 @@ class Regular_Updater
   end
 
   def self.update_item_quality(item)
-    item.quality -= 1 if !is_expired?(item) || item.quality == 1
-    item.quality -= 2 if is_expired?(item)
+    if !is_expired?(item) or item.quality == 1
+      item.quality -= 1 
+    else
+      item.quality -= 2
+    end
   end
 
   def self.is_expired?(item)
