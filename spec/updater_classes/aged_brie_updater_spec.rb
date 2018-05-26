@@ -1,4 +1,4 @@
-require_relative 'helper_methods'
+require 'helper_methods'
 require 'pry'
 require './lib/updater_classes/aged_brie_updater'
 

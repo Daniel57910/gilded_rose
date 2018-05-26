@@ -1,4 +1,4 @@
-require_relative 'helper_methods'
+require 'helper_methods'
 require './lib/updater_classes/backstage_pass_updater'
 
 require 'pry'

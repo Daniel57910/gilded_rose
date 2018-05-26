@@ -1,6 +1,5 @@
-require_relative 'spec_helper'
 require './lib/updater_classes/conjured_updater'
-require_relative 'helper_methods'
+require 'helper_methods'
 
 describe Conjured_Updater do
   it "decrements the quality of the conjured_item by one" do
