@@ -15,20 +15,61 @@ describe "Integration Testing" do
       Item.new("Sulfura, Hand of Ragnaros", 10, 10),
       Item.new("Backstage Pass", 0, 10),
       Item.new("Backstage Pass", 2, 10),
-      Item.new("Backstage Pass", 2, 10),
+      Item.new("Backstage Pass", 7, 10),
       Item.new("Backstage Pass", 39, 15)
     ]
     @shop = Gilded_Rose.new(all_items)
+    @shop.update_quality
   end
 
   describe" Separating Item" do
     it "separates the items into regular, irregular and legendary" do
-      @shop.update_quality
       expect(@shop.regular_items.length).to eq 3
       expect(@shop.irregular_items.length).to eq 7
       expect(@shop.sulfuras.length).to eq 1
     end
   end
+
+  describe "Legendary Item" do
+    it "does nothing to the legendary item" do
+      expect(@shop.sulfuras[0].quality).to eq 10
+      expect(@shop.sulfuras[0].quality).to eq 10
+    end
+  end
+
+  describe "Irregular Items" do
+   describe "Aged Brie" do
+      it "increases the value of aged brie while <= 50" do
+        expect(@shop.items[0].quality).to eq 50
+        expect(@shop.items[1].quality).to eq 50
+        expect(@shop.items[0].sell_in).to eq -10
+        expect(@shop.items[1].sell_in).to eq -10
+      end
+    end
+
+    describe "Conjure Cheese" do
+      it "decreases in sell_in twice as fast" do
+        expect(@shop.items[5].quality).to eq 5
+        expect(@shop.items[5].sell_in).to eq 6
+      end
+    end
+
+    describe "Backstage Pass" do
+      it "is worthless when the sell_in is < 0" do
+        expect(@shop.items[7].quality).to eq 0
+        expect(@shop.items[7].sell_in).to eq -1
+      end
+      it "increases by value in 3 with < 5 days" do
+        expect(@shop.items[8].quality).to eq 13
+        expect(@shop.items[8].sell_in).to eq 1
+      end
+      it "increases by value of 2 with <= 10 days" do
+        expect(@shop.items[9].quality).to eq 12
+        expect(@shop.items[9].sell_in).to eq 6
+      end
+    end
+  end
+
 end
 
 
