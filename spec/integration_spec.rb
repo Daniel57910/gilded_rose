@@ -16,7 +16,8 @@ describe "Integration Testing" do
       Item.new("Backstage Pass", 0, 10),
       Item.new("Backstage Pass", 2, 10),
       Item.new("Backstage Pass", 7, 10),
-      Item.new("Backstage Pass", 39, 15)
+      Item.new("Backstage Pass", 39, 15),
+      Item.new("Expired Regular", -6, 5)
     ]
     @shop = Gilded_Rose.new(all_items)
     @shop.update_quality
@@ -24,7 +25,7 @@ describe "Integration Testing" do
 
   describe" Separating Item" do
     it "separates the items into regular, irregular and legendary" do
-      expect(@shop.regular_items.length).to eq 3
+      expect(@shop.regular_items.length).to eq 4
       expect(@shop.irregular_items.length).to eq 7
       expect(@shop.sulfuras.length).to eq 1
     end
@@ -38,6 +39,7 @@ describe "Integration Testing" do
   end
 
   describe "Irregular Items" do
+
    describe "Aged Brie" do
       it "increases the value of aged brie while <= 50" do
         expect(@shop.items[0].quality).to eq 50
@@ -67,6 +69,23 @@ describe "Integration Testing" do
         expect(@shop.items[9].quality).to eq 12
         expect(@shop.items[9].sell_in).to eq 6
       end
+    end
+
+  end
+
+  describe "Regular Items" do
+    it "decreases quality by 1 if quality if positive and item is not expired" do
+      expect(@shop.items[2].quality).to eq 2
+      expect(@shop.items[2].sell_in).to eq 4
+    end
+
+    it "does not decrease quality to less than 0" do
+      expect(@shop.items[3].quality).to eq 0
+    end
+
+    it "decreases quality by 2 if item's expired" do
+      expect(@shop.items.last.quality).to eq 3
+      expect(@shop.items.last.sell_in).to eq -7
     end
   end
 
