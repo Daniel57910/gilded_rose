@@ -14,10 +14,10 @@ class Gilded_Rose
       @regular_items = []
       @irregular_items = []
       @sulfuras = []
+      categorize_items 
     end
 
     def update_quality()
-      categorize_items
       update_regular_items
       update_irregular_items
       item_quality_checker

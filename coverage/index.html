@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2018-05-27T10:48:37+01:00">2018-05-27T10:48:37+01:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2018-05-27T14:13:06+01:00">2018-05-27T14:13:06+01:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,7 +25,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         13.66
+         13.9
        </span>
     </span> hits/line)
   </h2>
@@ -107,7 +107,7 @@
         <td>14</td>
         <td>14</td>
         <td>0</td>
-        <td>88.1</td>
+        <td>92.0</td>
       </tr>
       
       <tr>
@@ -117,7 +117,7 @@
         <td>32</td>
         <td>32</td>
         <td>0</td>
-        <td>29.0</td>
+        <td>29.7</td>
       </tr>
       
       <tr>
@@ -777,8 +777,8 @@
           <code class="ruby">  def self.special_products</code>
         </li>
       
-        <li class="covered" data-hits="266" data-linenumber="5">
-          <span class="hits">266</span>
+        <li class="covered" data-hits="278" data-linenumber="5">
+          <span class="hits">278</span>
           
           <code class="ruby">    SPECIAL_ITEMS</code>
         </li>
@@ -801,8 +801,8 @@
           <code class="ruby">  def is_regular_item?(name)</code>
         </li>
       
-        <li class="covered" data-hits="266" data-linenumber="9">
-          <span class="hits">266</span>
+        <li class="covered" data-hits="278" data-linenumber="9">
+          <span class="hits">278</span>
           
           <code class="ruby">   !(Name_Checker.special_products.include?(name) or is_legendary_item(name) or is_conjured_item?(name))</code>
         </li>
@@ -825,8 +825,8 @@
           <code class="ruby">  def is_conjured_item?(name)</code>
         </li>
       
-        <li class="covered" data-hits="191" data-linenumber="13">
-          <span class="hits">191</span>
+        <li class="covered" data-hits="203" data-linenumber="13">
+          <span class="hits">203</span>
           
           <code class="ruby">    name.include?(&quot;conjure&quot;)</code>
         </li>
@@ -849,8 +849,8 @@
           <code class="ruby">  def is_legendary_item(name)</code>
         </li>
       
-        <li class="covered" data-hits="357" data-linenumber="17">
-          <span class="hits">357</span>
+        <li class="covered" data-hits="375" data-linenumber="17">
+          <span class="hits">375</span>
           
           <code class="ruby">    name == &quot;Sulfura, Hand of Ragnaros&quot;</code>
         </li>
@@ -1036,28 +1036,28 @@
           <code class="ruby">      @sulfuras = []</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="17">
+        <li class="covered" data-hits="15" data-linenumber="17">
+          <span class="hits">15</span>
           
-          
-          <code class="ruby">    end</code>
+          <code class="ruby">      categorize_items </code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="18">
           
           
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="19">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="19">
+        <li class="covered" data-hits="1" data-linenumber="20">
           <span class="hits">1</span>
           
           <code class="ruby">    def update_quality()</code>
-        </li>
-      
-        <li class="covered" data-hits="13" data-linenumber="20">
-          <span class="hits">13</span>
-          
-          <code class="ruby">      categorize_items</code>
         </li>
       
         <li class="covered" data-hits="13" data-linenumber="21">
@@ -1204,26 +1204,26 @@
           <code class="ruby">  def categorize_items</code>
         </li>
       
-        <li class="covered" data-hits="13" data-linenumber="45">
-          <span class="hits">13</span>
+        <li class="covered" data-hits="15" data-linenumber="45">
+          <span class="hits">15</span>
           
           <code class="ruby">    @items.each do |item|</code>
         </li>
       
-        <li class="covered" data-hits="133" data-linenumber="46">
-          <span class="hits">133</span>
+        <li class="covered" data-hits="139" data-linenumber="46">
+          <span class="hits">139</span>
           
           <code class="ruby">      @regular_items.push(item) if is_regular_item?(item.name)</code>
         </li>
       
-        <li class="covered" data-hits="133" data-linenumber="47">
-          <span class="hits">133</span>
+        <li class="covered" data-hits="139" data-linenumber="47">
+          <span class="hits">139</span>
           
           <code class="ruby">      @irregular_items.push(item) if !is_regular_item?(item.name) and !is_legendary_item(item.name)</code>
         </li>
       
-        <li class="covered" data-hits="133" data-linenumber="48">
-          <span class="hits">133</span>
+        <li class="covered" data-hits="139" data-linenumber="48">
+          <span class="hits">139</span>
           
           <code class="ruby">      @sulfuras.push(item) if is_legendary_item(item.name)</code>
         </li>

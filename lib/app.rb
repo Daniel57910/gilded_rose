@@ -1,6 +1,5 @@
 require_relative 'shop'
 require_relative 'item'
-require 'pry'
 
 all_items = [
   Item.new("Aged Brie", -9, 49), 
@@ -17,6 +16,15 @@ all_items = [
 ]
 
 shop = Gilded_Rose.new(all_items)
+puts shop.items
 shop.update_quality
+puts "Item Name | Sell_In | Quality"
+puts "\nAfter 1st Update: \n"
+puts shop.items
+puts "\nAfter 2nd Update: \n"
 shop.update_quality
+puts shop.items 
+puts "\n\n"
+shop.update_quality
+puts shop.items
 
