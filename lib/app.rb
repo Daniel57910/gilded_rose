@@ -16,15 +16,17 @@ all_items = [
 ]
 
 shop = Gilded_Rose.new(all_items)
+puts "\n\n"
+puts "Item Name | Sell_In | Quality"
+puts "\nBefore Update: \n"
 puts shop.items
 shop.update_quality
-puts "Item Name | Sell_In | Quality"
 puts "\nAfter 1st Update: \n"
 puts shop.items
 puts "\nAfter 2nd Update: \n"
 shop.update_quality
 puts shop.items 
-puts "\n\n"
+puts "\nAfter 3rd Update: \n"
 shop.update_quality
 puts shop.items
 

@@ -1,22 +1,22 @@
 **Gilded Rose Tech Test**
 
- This is a well known kata developed by Terry Hughes. This is commonly used as a tech test to assess a candidate's ability to read, refactor and extend legacy code.
+ The Gilded Rose is a refactoring exercise where you have to improve the quality of legacy code and add a new feature. As it was a refactoring exercise, rather than starting the project from scratch I incremenentally added to the code base. The first thing I introduced was a separation of items into regular and irregular. 
+ 
+ From there I refactored the code base so that the items were handled separately. To ensure this I created separate classes to handle regular items, and irregular items. Both classes rely on modules which contain code that all the classes need. Having modules reduces repetition and will enable me to add additional features to the codebase.
 
-Here is the text of the kata:
+ I also introduced unit tests for each class, and an integration test to ensure changes made to items by a class reflected the desired state. The classes rely on passing objects by reference. When an item is passed to the item it recieves a pointer to the objects memory address. Any items changed by the class are thus updated throughout the application. I needed to ensure that I was keeping track of changes to item state, as they would persist throughout the application.
 
-*"Hi and welcome to team Gilded Rose. As you know, we are a small inn with a prime location in a prominent city run by a friendly innkeeper named Allison. We also buy and sell only the finest goods. Unfortunately, our goods are constantly degrading in quality as they approach their sell by date. We have a system in place that updates our inventory for us. It was developed by a no-nonsense type named Leeroy, who has moved on to new adventures. Your task is to add the new feature to our system so that we can begin selling a new category of items. First an introduction to our system:
+ The most challenging part of the application was debugging at the very end. If one update_quality method is called it updates the items as expected. However initially subsequent updates would change the state of quality and sell_in in strange ways. This was because initially I had my sorting of items included in the update quality method. Everytime the quality was updated the the sorted arrays received the exact same objects, creating unintended results. I was able to fix the bug by checking the item classes weren't changing sell_in multiple times and having the items sorted upon class initialization. 
 
-All items have a SellIn value which denotes the number of days we have to sell the item. All items have a Quality value which denotes how valuable the item is. At the end of each day our system lowers both values for every item. Pretty simple, right? Well this is where it gets interesting:
+ Through the challenge I learnt how to take advantage of calling by reference. I also am pleased with the modular code I've created, and my adherence to refactoring the codebase gradually. If I was to do this challenge again I would write integration tests before refactoring and ensure that every refactor passed unit and integration tests.
 
-Once the sell by date has passed, Quality degrades twice as fast
-The Quality of an item is never negative
-“Aged Brie” actually increases in Quality the older it gets
-The Quality of an item is never more than 50
-“Sulfuras”, being a legendary item, never has to be sold or decreases in Quality
-“Backstage passes”, like aged brie, increases in Quality as it’s SellIn value approaches; Quality increases by 2 when there are 10 days or less and by 3 when there are 5 days or less but Quality drops to 0 after the concert
-We have recently signed a supplier of conjured items. This requires an update to our system:
+ **How To Run The App**
 
-“Conjured” items degrade in Quality twice as fast as normal items
-Feel free to make any changes to the UpdateQuality method and add any new code as long as everything still works correctly. However, do not alter the Item class or Items property as those belong to the goblin in the corner who will insta-rage and one-shot you as he doesn’t believe in shared code ownership (you can make the UpdateQuality method and Items property static if you like, we’ll cover for you)."*
+ Ensure you have ruby 2.5.0 installed in your computer and clone/download the repository. From there type in bundle install to install the necessary dependencies. Once this has been done you can either type in from the command line ruby lib/app.rb to run a sample application, or repuire the files into a REPL like irb to begin adding items to the gilded rose.
 
+ To check the tests, run rspec and you will see 27 passing tests. These cover the individual classes and an integration test. To improve the testing I should have run an integration test for multiple update calls. 
+
+ **Screenshot of Application**
+ 
+ ![example application](./example_code.png)
 
