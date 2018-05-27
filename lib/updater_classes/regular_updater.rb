@@ -16,8 +16,8 @@ class Regular_Updater
 
   def self.update_regular_items
     @@items.each do | item |
-      update_item_quality(item) if item_quality_positive?(item)
       update_sell_in(item)
+      update_item_quality(item) if item_quality_positive?(item)
     end
   end
 
