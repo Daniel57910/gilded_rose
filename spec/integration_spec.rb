@@ -1,5 +1,5 @@
-require_relative 'shop'
-require_relative 'item'
+require "./lib/shop"
+require "./lib/item"
 require 'pry'
 
 all_items = [
@@ -17,6 +17,9 @@ all_items = [
 ]
 
 shop = Gilded_Rose.new(all_items)
-shop.update_quality
-shop.update_quality
+binding.pry
+
+  
+
+
 

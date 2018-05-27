@@ -49,9 +49,5 @@ class Gilded_Rose
     end
   end
 
-  def update_sell_in(item)
-    item.sell_in -= 1
-  end
-
 end
 

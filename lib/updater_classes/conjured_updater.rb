@@ -1,7 +1,7 @@
 require ("./lib/modules/item_updater_methods")
 require ("./lib/modules/item_sell_in")
 
-class Conjured_Updater
+class Conjured_Item_Updater
 
   extend Item_Updater_Methods
   extend Update_Sell_In

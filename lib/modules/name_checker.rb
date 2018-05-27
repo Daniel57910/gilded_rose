@@ -1,5 +1,5 @@
 module Name_Checker 
-  SPECIAL_ITEMS = ["Aged Brie", "Backstage passes to a TAKAL80ETC concert"]
+  SPECIAL_ITEMS = ["Aged Brie", "Backstage Pass"]
   
   def self.special_products
     SPECIAL_ITEMS
